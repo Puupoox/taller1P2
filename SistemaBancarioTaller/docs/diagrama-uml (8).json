@@ -1,0 +1,1021 @@
+{
+  "classes": [
+    {
+      "id": "cls_1775168888609",
+      "name": "Persona",
+      "x": 37.254901960784316,
+      "y": 23.36665134803922,
+      "type": "abstract",
+      "attrs": [
+        "- atributo: String",
+        "- Id: int",
+        "- nombre: String",
+        "- apellido: String",
+        "- fechaNacimiento(localDate): String",
+        "- email: String"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ CalcularEdad(): int",
+        "+ obtenerTipo: String",
+        "+ obtenerDocumetoIdentidad(): String",
+        "+ getNombreCompleto(): String"
+      ]
+    },
+    {
+      "id": "cls_1775169273569",
+      "name": "Empleado",
+      "x": 27.429079541973024,
+      "y": 570.5590341605392,
+      "type": "abstract",
+      "attrs": [
+        "- atributo: String",
+        "- legajo: String",
+        "- fechaContratacion: LocalDate",
+        "- salarioBase: double",
+        "- activo: boolean"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ calcularSalario(): double",
+        "+ calcularBono: double",
+        "+ calcularAntigüedad(): int"
+      ]
+    },
+    {
+      "id": "cls_1775169897613",
+      "name": "Cliente",
+      "x": 393.1367761948529,
+      "y": 0,
+      "type": "abstract",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775170264413",
+      "name": "clienteNatural",
+      "x": 605.5004643458946,
+      "y": 153.4398696001838,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- tipoDocumento: TipoDocumento",
+        "- numeroDocumento: String",
+        "- cuentas: Cuenta[5]"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ calcularEdad(): int",
+        "+ obtenerTipo(): String",
+        "+ obtenerDocIdentidad(): string"
+      ]
+    },
+    {
+      "id": "cls_1775171077838",
+      "name": "clienteEmpresarial",
+      "x": 360.769713158701,
+      "y": 148.9502551508885,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- nit: String",
+        "- razonSocial: String",
+        "- representanteLegal: String",
+        "- cuentas: Cuenta[5]"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ calcularEdad(): int",
+        "+ obtenerTipo(): String",
+        "+ obtenerDocIdentidad(): String"
+      ]
+    },
+    {
+      "id": "cls_1775172344343",
+      "name": "Cajero",
+      "x": 21.465944776348042,
+      "y": 1135.3132659313726,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- turno: Turno",
+        "- sucursalAsignada: String",
+        "- transaccionesDia: int"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ calcularSalario(): double"
+      ]
+    },
+    {
+      "id": "cls_1775172645211",
+      "name": "AsesorFinanciero",
+      "x": 287.5068215762867,
+      "y": 881.1090207567402,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- comisionBase: double",
+        "- metasMensuales: double",
+        "- clientesAsignados: Cliente[20]"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ calcularSalario(): double"
+      ]
+    },
+    {
+      "id": "cls_1775172834862",
+      "name": "GerenteSucursal",
+      "x": 266.592347388174,
+      "y": 1150.7157868030024,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- sucursal: String",
+        "- presupuestoAnual: double",
+        "- empleadosACargo: Empleado[30]"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ calcularSalario(): double"
+      ]
+    },
+    {
+      "id": "cls_1775172980736",
+      "name": "Cuenta",
+      "x": 2620.3988008720926,
+      "y": 1056.9499880768528,
+      "type": "abstract",
+      "attrs": [
+        "- atributo: String",
+        "- numeroCuenta: String",
+        "- saldo: double",
+        "- bloqueada: boolean",
+        "- fechaCreacion: LocalDateTime",
+        "- ultimaModificacion: LocalDateTime",
+        "- usuarioModificacion: String"
+      ],
+      "methods": [
+        "+ metodo(): void",
+        "+ calcularInteres(): double",
+        "+ getLimiteRetiro() double",
+        "+ getTipoCuenta(): String",
+        "+ verificarBloqueada(): void",
+        "+ agregarAlHistorial(Transaccion t): void",
+        "+ getHistorial(): Transaccion[ ]"
+      ]
+    },
+    {
+      "id": "cls_1775174272242",
+      "name": "CuentaAhorros",
+      "x": 2361.4489178324848,
+      "y": 1703.5288256268163,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- tasaInteres: double",
+        "- retirosMesActual: int",
+        "- maxRetirosMes: int"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775174386023",
+      "name": "cuentaCorriente",
+      "x": 2861.5829112917872,
+      "y": 1715.3479287790694,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- montoSobregiro: double",
+        "- comisionMantenimiento: double"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775174697775",
+      "name": "cuentaCredito",
+      "x": 2601.6725052234733,
+      "y": 1689.138013263081,
+      "type": "class",
+      "attrs": [
+        "- atributo: String",
+        "- limiteCredito: double",
+        "- tasaInteres: double",
+        "- tasaInteres: double"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775421696088",
+      "name": "Consultable",
+      "x": 767.8375244140623,
+      "y": 1752.8778785882992,
+      "type": "interface",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ obtenerResumen(): String",
+        "+ estaActivo(): boolean"
+      ]
+    },
+    {
+      "id": "cls_1775421709812",
+      "name": "Auditable",
+      "x": 440.89285714285705,
+      "y": 1726.448102678571,
+      "type": "interface",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ obtenerFechaCreacion(): LocalDateTime",
+        "+ obtenerUltimaModificacion(): LocalDateTime",
+        "+ obtenerUsuarioModificacion(): String",
+        "+ registrarModificacion(usuario: String): void"
+      ]
+    },
+    {
+      "id": "cls_1775421719889",
+      "name": "Transaccionable",
+      "x": 454.2717633928572,
+      "y": 1958.6830357142858,
+      "type": "interface",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ depositar(monto: double): void",
+        "+ retirar(monto: double): void {throws SaldoInsuficienteException}",
+        "+ calcularComision(monto: double): double",
+        "+ consultarSaldo(): double"
+      ]
+    },
+    {
+      "id": "cls_1775423160932",
+      "name": "Notificable",
+      "x": 867.9603794642858,
+      "y": 1968.3983503069198,
+      "type": "interface",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ notificar(mensaje: String): void",
+        "+ obtenerContacto(): String",
+        "+ aceptaNotificaciones(): boolean"
+      ]
+    },
+    {
+      "id": "cls_1775425704570",
+      "name": "Exception",
+      "x": 2019.3775850183822,
+      "y": 15.033318014705884,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775425749970",
+      "name": "SistemaBancarioException",
+      "x": 2312.68310546875,
+      "y": 0.2787870519301485,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775425862330",
+      "name": "SaldoInsuficienteException",
+      "x": 1959.2364643895346,
+      "y": 386.7170466933139,
+      "type": "class",
+      "attrs": [
+        "- saldoActual: double",
+        "- montoSolicitado: double"
+      ],
+      "methods": [
+        "+ getSaldoActual(): double",
+        "+ getMontoSolicitado(): double"
+      ]
+    },
+    {
+      "id": "cls_1775425973834",
+      "name": "CapacidadExcedidaException",
+      "x": 2271.9837277434585,
+      "y": 461.4526083303051,
+      "type": "class",
+      "attrs": [
+        "- capacidadMaxima: int"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775426265730",
+      "name": "CuentaBloqueadaException",
+      "x": 2281.069527420343,
+      "y": 326.00719975490193,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775426295410",
+      "name": "ClienteNoEncontradoException",
+      "x": 1944.8930328967524,
+      "y": 224.1137934666054,
+      "type": "class",
+      "attrs": [
+        "- idCliente: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775426780443",
+      "name": "BancoRuntimeException",
+      "x": 2769.2564883474574,
+      "y": 0,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775427475114",
+      "name": "DatoInvalidoException",
+      "x": 3057.520488664216,
+      "y": 161.66172401577816,
+      "type": "class",
+      "attrs": [
+        "- campo: String",
+        "- valorRecibido: Object"
+      ],
+      "methods": [
+        "+ getCampo(): String",
+        "+ getValorRecibido(): Object"
+      ]
+    },
+    {
+      "id": "cls_1775428933173",
+      "name": "EstadoTransaccionInvalidoException",
+      "x": 2641.2609623927697,
+      "y": 175.7345760569853,
+      "type": "class",
+      "attrs": [
+        "- estadoOrigen: EstadoTransaccion",
+        "- estadoDestino: EstadoTransaccion"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775429028405",
+      "name": "PermisoInsuficienteException",
+      "x": 3039.5732804840686,
+      "y": 439.34816846660533,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775429886959",
+      "name": "<<enumeration>> EstadoTransaccion",
+      "x": 1460.5747596890317,
+      "y": 1392.9721009497548,
+      "type": "class",
+      "attrs": [
+        "PENDIENTE",
+        "PROCESANDO",
+        "COMPLETADA",
+        "RECHAZADA",
+        "REVERTIDA"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775429998470",
+      "name": "<<enumeration>> TipoCuenta",
+      "x": 1822.747324027267,
+      "y": 1448.4745998008577,
+      "type": "class",
+      "attrs": [
+        "CORRIENTE",
+        "AHORROS",
+        "CREDITO"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775430068669",
+      "name": "<<enumeration>> Turno",
+      "x": 1490.0918399586396,
+      "y": 1706.5892836626838,
+      "type": "class",
+      "attrs": [
+        "MAÑANA",
+        "TARDE",
+        "NOCHE"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775430112733",
+      "name": "<<enumeration>> TipoDocumento",
+      "x": 5884.434331849564,
+      "y": 21771.169831031977,
+      "type": "class",
+      "attrs": [
+        "CEDULA"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775430393583",
+      "name": "<<enumeration>> TipoDocumento",
+      "x": 1138.3157169117646,
+      "y": 1406.643616919424,
+      "type": "class",
+      "attrs": [
+        "CEDULA",
+        "PASAPORTE",
+        "NIT",
+        "CEDULA_EXTRANJERIA"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775432565400",
+      "name": "Transaccion",
+      "x": 2270.1450892857138,
+      "y": 1094.2131696428569,
+      "type": "class",
+      "attrs": [
+        "- id: String",
+        "- cuentaOrigen: Cuenta",
+        "- cuentaDestino: Cuenta",
+        "- monto: double",
+        "- estado: EstadoTransaccion",
+        "- fecha: LocalDateTime",
+        "- descripcion: String"
+      ],
+      "methods": [
+        "+ generarComprobante(): String",
+        "+ cambiarEstado(nuevo: EstadoTransaccion): void"
+      ]
+    },
+    {
+      "id": "cls_1775444405832",
+      "name": "Banco",
+      "x": 1202.1595982142853,
+      "y": 161.45089285714283,
+      "type": "class",
+      "attrs": [
+        "- nombre: String",
+        "- empleados: Empleado[50]",
+        "- clientes: Cliente[200]",
+        "- cuentas: Cuenta[500]"
+      ],
+      "methods": [
+        "+ registrarCliente(c: Cliente): void",
+        "+ registrarEmpleado(e: Empleado): void",
+        "+ abrirCuenta(idCliente: String, c: Cuenta): void",
+        "+ calcularNominaTotal(): double",
+        "+ calcularInteresesMensuales(): void"
+      ]
+    },
+    {
+      "id": "cls_1775445289075",
+      "name": "SistemaBancarioDemo",
+      "x": 1043.3945599724266,
+      "y": 0,
+      "type": "class",
+      "attrs": [
+        "--------------------------"
+      ],
+      "methods": [
+        "+ main(args: String[]): void"
+      ]
+    },
+    {
+      "id": "cls_1775446045546",
+      "name": "Enums",
+      "x": 1501.2313584149895,
+      "y": 1198.1729798397776,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775446250978",
+      "name": "Interfaces",
+      "x": 11.414620535714285,
+      "y": 1750.678013392857,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    },
+    {
+      "id": "cls_1775446822017",
+      "name": "RuntimeException",
+      "x": 3119.7589931203356,
+      "y": 0,
+      "type": "class",
+      "attrs": [
+        "- atributo: String"
+      ],
+      "methods": [
+        "+ metodo(): void"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "cls_1775169273569",
+      "to": "cls_1775168888609",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775169897613",
+      "to": "cls_1775168888609",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775170264413",
+      "to": "cls_1775169897613",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775171077838",
+      "to": "cls_1775169897613",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172344343",
+      "to": "cls_1775169273569",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172645211",
+      "to": "cls_1775169273569",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172834862",
+      "to": "cls_1775169273569",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174272242",
+      "to": "cls_1775172980736",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174386023",
+      "to": "cls_1775172980736",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174697775",
+      "to": "cls_1775172980736",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775170264413",
+      "to": "cls_1775421696088",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775170264413",
+      "to": "cls_1775421709812",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775171077838",
+      "to": "cls_1775421696088",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775171077838",
+      "to": "cls_1775421709812",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775170264413",
+      "to": "cls_1775423160932",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775171077838",
+      "to": "cls_1775423160932",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174272242",
+      "to": "cls_1775421709812",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174272242",
+      "to": "cls_1775421696088",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174272242",
+      "to": "cls_1775421719889",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174697775",
+      "to": "cls_1775421709812",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174697775",
+      "to": "cls_1775421696088",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174386023",
+      "to": "cls_1775421719889",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172645211",
+      "to": "cls_1775421709812",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172645211",
+      "to": "cls_1775421696088",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172834862",
+      "to": "cls_1775421709812",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172834862",
+      "to": "cls_1775421696088",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174386023",
+      "to": "cls_1775421709812",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174386023",
+      "to": "cls_1775421696088",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775174697775",
+      "to": "cls_1775421719889",
+      "type": "implements",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775425749970",
+      "to": "cls_1775425704570",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775425862330",
+      "to": "cls_1775425749970",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775425973834",
+      "to": "cls_1775425749970",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775426265730",
+      "to": "cls_1775425749970",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775426295410",
+      "to": "cls_1775425749970",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775427475114",
+      "to": "cls_1775426780443",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775428933173",
+      "to": "cls_1775426780443",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775429028405",
+      "to": "cls_1775426780443",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172980736",
+      "to": "cls_1775429998470",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775169273569",
+      "to": "cls_1775430068669",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775168888609",
+      "to": "cls_1775430393583",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775169897613",
+      "to": "cls_1775172980736",
+      "type": "asociacion",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775432565400",
+      "to": "cls_1775172980736",
+      "type": "composicion",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775432565400",
+      "to": "cls_1775429886959",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775432565400",
+      "to": "cls_1775428933173",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775169897613",
+      "to": "cls_1775444405832",
+      "type": "composicion",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775169273569",
+      "to": "cls_1775444405832",
+      "type": "composicion",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172980736",
+      "to": "cls_1775444405832",
+      "type": "composicion",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775444405832",
+      "to": "cls_1775425973834",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775444405832",
+      "to": "cls_1775426295410",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775172834862",
+      "to": "cls_1775429028405",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775445289075",
+      "to": "cls_1775444405832",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775445289075",
+      "to": "cls_1775172344343",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775445289075",
+      "to": "cls_1775169897613",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775430393583",
+      "to": "cls_1775446045546",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775429886959",
+      "to": "cls_1775446045546",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775430068669",
+      "to": "cls_1775446045546",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775429998470",
+      "to": "cls_1775446045546",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775421696088",
+      "to": "cls_1775446250978",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775421719889",
+      "to": "cls_1775446250978",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775423160932",
+      "to": "cls_1775446250978",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775421709812",
+      "to": "cls_1775446250978",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775426780443",
+      "to": "cls_1775446822017",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    }
+  ]
+}
