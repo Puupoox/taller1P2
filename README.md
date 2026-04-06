@@ -10,9 +10,10 @@
 
 ## 👨‍💻 Integrantes
 
-* Nombre 1
-* Nombre 2
-* Nombre 3
+* Reinel Pupo Morelo
+* Melani Johana Polo Beltran
+* Alexander Polo Narvaez
+* Emiliano Perez Meza
 
 ---
 
